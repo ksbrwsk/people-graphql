@@ -1,0 +1,7 @@
+mutation createPerson($input: PersonInput) {
+   createPerson(input: $input){
+        id
+        name
+        vorname
+    }
+}

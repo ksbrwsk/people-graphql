@@ -1,0 +1,5 @@
+{
+  "name": "Simple Spring Boot GraphQl Schema",
+  "schemaPath": "src/main/resources/graphql/schema.graphqls",
+  "extensions": {}
+}

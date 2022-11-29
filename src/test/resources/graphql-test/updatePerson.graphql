@@ -1,0 +1,7 @@
+mutation updatePerson($input: PersonInput){
+    updatePerson(input: $input){
+        id
+        name
+        vorname
+    }
+}

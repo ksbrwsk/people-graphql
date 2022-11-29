@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring
+    hikari:
+      username: postgres
+      password: password123
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphql
+server:
+  error:
+    include-stacktrace: always

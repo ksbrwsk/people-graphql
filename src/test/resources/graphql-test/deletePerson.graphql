@@ -1,0 +1,6 @@
+mutation {
+    deletePerson(id: 1) {
+        message
+        status
+    }
+}

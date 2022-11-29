@@ -1,0 +1,7 @@
+query findAll {
+    findAll{
+        id
+        name
+        vorname
+    }
+}

@@ -1,0 +1,33 @@
+type Person {
+    id: ID!
+    name: String
+    vorname: String
+}
+
+enum Status {
+    SUCCESS
+    FAILED
+}
+
+type Response {
+    status: Status
+    message: String
+}
+
+input PersonInput {
+    id: ID
+    name: String
+    vorname: String
+}
+
+type Query {
+    findOne(id: ID!): Person
+    findAll: [Person]
+}
+
+type Mutation {
+    updatePerson(input: PersonInput): Person
+    createPerson(input: PersonInput): Person
+    deletePerson(id: ID!): Response
+}
+

@@ -1,0 +1,7 @@
+query findOne($id: ID!){
+    findOne(id: $id){
+        id
+        name
+        vorname
+    }
+}
