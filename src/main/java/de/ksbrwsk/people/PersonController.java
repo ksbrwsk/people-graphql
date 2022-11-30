@@ -21,8 +21,9 @@ public class PersonController {
     }
 
     @QueryMapping
-    Optional<Person> findOne(@Argument Long id) {
-        return this.personRepository.findById(id);
+    Person findOne(@Argument Long id) {
+        var person =  this.personRepository.findById(id);
+        return person.orElseThrow();
     }
 
     @MutationMapping

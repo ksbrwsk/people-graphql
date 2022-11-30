@@ -79,14 +79,14 @@ public class GraphQlTest extends AbstractIntegrationTest {
     void updatePerson() {
         var person = this.fetchFirst();
         graphQlTester.documentName("updatePerson")
-                .variable("input", new PersonInput(person.getId(), "Name", "Vorname"))
+                .variable("input", new PersonInput(person.getId(), "Update", "Update"))
                 .execute()
                 .path("updatePerson")
                 .entity(Person.class)
                 .satisfies(data -> {
                     assertEquals(person.getId(), data.getId());
-                    assertEquals("Name", data.getName());
-                    assertEquals("Vorname", data.getVorname());
+                    assertEquals("Update", data.getName());
+                    assertEquals("Update", data.getVorname());
                 });
     }
 }
